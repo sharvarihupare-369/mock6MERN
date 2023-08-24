@@ -3,7 +3,7 @@ const authMid = require("../middleware/authMid");
 const BlogModel = require("../models/blogModel");
 const postRouter =  express.Router()
 
-postRouter.get("/blogs",authMid,async(req,res)=>{
+postRouter.get("/blogs",async(req,res)=>{
 
     const {q} = req.query;
 
@@ -20,7 +20,7 @@ postRouter.get("/blogs",authMid,async(req,res)=>{
     }
 })
 
-postRouter.get("/blogs",authMid,async(req,res)=>{
+postRouter.get("/blogs",async(req,res)=>{
     const {title,category} = req.query;
     try {
 
