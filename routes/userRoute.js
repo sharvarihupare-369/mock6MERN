@@ -26,7 +26,7 @@ userRouter.post("/login",async(req,res)=>{
         if(!user){
             res.status(400).send({"msg":"Invalid Credentials!"})
         }
-        const comparePassword = await bcrypt.hash(password,user.password)
+        const comparePassword = await bcrypt.compare(password,user.password)
         if(!comparePassword){
             res.status(400).send({"msg":"Invalid Credentials!"})
         }else{
