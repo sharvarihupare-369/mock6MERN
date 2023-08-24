@@ -11,6 +11,9 @@ app.use(cors())
 app.use("/users",userRouter)
 app.use("/posts",postRouter)
 
+app.get("/",(req,res)=>{
+    res.status(200).send("Welcome To Home Page")
+})
 
 app.listen(process.env.PORT || 5000 , async()=>{
     try {
