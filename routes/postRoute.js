@@ -32,7 +32,7 @@ postRouter.get("/blogs",async(req,res)=>{
     }
  })
 
-postRouter.get("/blogs",authMid,async(req,res)=>{
+postRouter.get("/blogs",async(req,res)=>{
    const {sort,order} = req.query;
    try {
     let sortField = sort;
